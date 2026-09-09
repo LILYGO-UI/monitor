@@ -1,0 +1,46 @@
+schema_version = 1
+
+[project]
+package = "lilygo-ui-monitor"
+version = "0.1.0"
+app_id = "cc.lilygo.ui.Monitor"
+title = "Monitor"
+summary = "Quickly view CPU, memory, storage, and network status"
+description = "A lightweight system monitor for LILYGO UI devices with live CPU, memory, storage, temperature, network, and system information."
+license = "MIT"
+source_repo = "https://github.com/LILYGO-UI/lilygo-ui-monitor"
+homepage = "https://github.com/LILYGO-UI/lilygo-ui-monitor"
+categories = ["Utilities"]
+permissions = []
+
+[[project.authors]]
+name = "lbuque"
+email = "110239031@qq.com"
+
+[project.assets]
+icon = "assets/app-icon.png"
+
+[[project.assets.screenshots]]
+path = "assets/previews/preview1.png"
+caption = "Main application screen"
+
+[[project.assets.screenshots]]
+path = "assets/previews/preview2.png"
+caption = "Measurement statistics"
+
+[project.compatibility]
+architectures = ["arm64"]
+min_appkit_version = "0.1.0"
+
+[project.launcher]
+order = 90
+
+[build]
+host_preset = "host-simulator"
+cross_preset = "cm0-cross"
+package_dir = "dist"
+
+[deploy]
+host = "192.168.8.114"
+user = "pi"
+port = 22
