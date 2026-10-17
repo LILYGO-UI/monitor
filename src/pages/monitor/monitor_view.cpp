@@ -2,6 +2,7 @@
 
 #include "components/components.hpp"
 
+#include <cm0/input.h>
 #include <cm0/typography.h>
 
 #include <algorithm>
@@ -441,6 +442,7 @@ void MonitorView::open_metric_dialog(MonitorMetric metric, const std::string &in
     selected_metric_    = metric;
     selected_interface_ = interface_name;
     metric_overlay_     = lv_obj_create(surface_);
+    cm0_input_set_focus_scope(metric_overlay_);
     lv_obj_set_name_static(metric_overlay_, "monitor_metric_overlay");
     make_transparent(metric_overlay_);
     lv_obj_add_flag(metric_overlay_, LV_OBJ_FLAG_IGNORE_LAYOUT);
