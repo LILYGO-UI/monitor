@@ -2,7 +2,7 @@ schema_version = 1
 
 [project]
 package = "lilygo-ui-monitor"
-version = "0.1.0"
+version = "0.1.1"
 app_id = "cc.lilygo.ui.Monitor"
 title = "Monitor"
 summary = "Quickly view CPU, memory, storage, and network status"
